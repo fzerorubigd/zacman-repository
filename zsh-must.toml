@@ -1,20 +1,21 @@
 author="fzerorubigd<fzero@rubi.gd>"
 version="1"
-description="Adds numbered shortcuts to the output git status, and much more"
+description="Some simple configuration for zsh extracted from oh-my-zsh and other"
 [install]
 	[install.repo]
 		# Installation repository. currently only support git repository
 		type= "git"
 		# Address of the repository
-		address="https://github.com/ndbroadbent/scm_breeze.git"
+		address="https://github.com/fzerorubigd/zsh-must.git"
 		# Target directory. if omit this the target is $ZACMAN_ROOT/${ZACMAN_NAME} and exported as ${ZACMAN_TARGET} in all
 		# installation scripts
-		target="~/.scm_breeze"
 		# Checkout after install?
-		checkout = "b6531e8379122675168c053c7b7111746b4891c6"
+		checkout = "master"
 	[install.zsh]
 		# List of files to source in the generated zshrc file, relative to ZACMAN_TARGET
-		source=["scm_breeze.sh"]
+		source=["completion.zsh", "correction.zsh", "directories.zsh", "history.zsh", "key-bindings.zsh" , "misc.zsh"]
 		# List of path to add to fpath folder
-		fpath=[]
+		fpath=[""]
+		# Load this only in interactive shells default false
+		interactive = false
 		
